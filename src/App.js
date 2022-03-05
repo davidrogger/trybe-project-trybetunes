@@ -1,6 +1,6 @@
 // Bibliotecas
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 // Componentes
 import Album from './pages/Album';
@@ -12,7 +12,22 @@ import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      logIn: false,
+    };
+  }
+
+  userLogin = () => {
+    this.setState({
+      logIn: true,
+    });
+  }
+
   render() {
+    const { logIn } = this.state;
     return (
       <main className="main-container">
         <Router>
@@ -22,7 +37,13 @@ class App extends Component {
             <Route path="/profile/" component={ Profile } />
             <Route path="/favorites" component={ Favorites } />
             <Route path="/search" component={ Search } />
-            <Route exact path="/" component={ Login } />
+
+            <Route exact path="/">
+              { logIn
+                ? <Redirect to="/search" />
+                : <Login userLogin={ this.userLogin } />}
+            </Route>
+
             <Route path="*" component={ NotFound } />
           </Switch>
         </Router>
