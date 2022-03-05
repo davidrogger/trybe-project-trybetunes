@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { createUser } from '../services/userAPI';
 
 // Componentes
-import Loading from './Loading';
+import Loading from '../components/Loading';
 
 // Estilização
 import '../styles/login.css';
