@@ -14,7 +14,7 @@ import NotFound from './pages/NotFound';
 class App extends Component {
   render() {
     return (
-      <main>
+      <main className="main-container">
         <Router>
           <Switch>
             <Route path="/album/:id" component={ Album } />
