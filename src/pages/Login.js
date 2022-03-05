@@ -1,4 +1,12 @@
+// Bibliotecas
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+// Serviços
+import { createUser } from '../services/userAPI';
+
+// Componentes
+import Loading from './Loading';
 
 // Estilização
 import '../styles/login.css';
@@ -9,6 +17,7 @@ class Login extends Component {
     this.state = {
       userName: '',
       buttonDisable: true,
+      loading: false,
     };
   }
 
@@ -29,9 +38,20 @@ minNameLength = () => {
     }, () => this.minNameLength());
   }
 
+  userLogin = async () => {
+    const { userName } = this.state;
+    const { userLogin } = this.props;
+
+    this.setState({
+      loading: true,
+    });
+    await createUser({ name: userName });
+    userLogin();
+  }
+
   render() {
-    const { userName, buttonDisable } = this.state;
-    return (
+    const { userName, buttonDisable, loading } = this.state;
+    return loading ? <Loading /> : (
       <section data-testid="page-login" className="login-container">
         <h1>trybe tunes</h1>
         <section className="login-forms">
@@ -48,6 +68,7 @@ minNameLength = () => {
             type="button"
             data-testid="login-submit-button"
             disabled={ buttonDisable }
+            onClick={ this.userLogin }
           >
             Entrar
           </button>
@@ -57,5 +78,9 @@ minNameLength = () => {
     );
   }
 }
+
+Login.propTypes = {
+  userLogin: PropTypes.func.isRequired,
+};
 
 export default Login;
