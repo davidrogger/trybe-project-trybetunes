@@ -8,9 +8,6 @@ import { createUser } from '../services/userAPI';
 // Componentes
 import Loading from '../components/Loading';
 
-// Estilização
-import '../styles/login.css';
-
 class Login extends Component {
   constructor(props) {
     super(props);
