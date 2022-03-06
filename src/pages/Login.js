@@ -63,6 +63,7 @@ minNameLength = () => {
 
           <button
             type="button"
+            className="blue-button"
             data-testid="login-submit-button"
             disabled={ buttonDisable }
             onClick={ this.userLogin }

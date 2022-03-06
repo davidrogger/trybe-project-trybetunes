@@ -13,17 +13,11 @@
 .login-forms input, .login-forms button {
   border: 1px solid rgba(0, 0, 0, 0.137);
   box-sizing: border-box;
-  height: 30px;
   width: 80%;
 }
 
 .login-forms input {
   padding: 15px;
-}
-
-.login-forms button {
-  background-color: rgb(1, 1, 207);
-  color: white;
 }
 
 .login-container h1 {
