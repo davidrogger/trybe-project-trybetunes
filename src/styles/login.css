@@ -1,16 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.main-container {
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  width: 100%;
-}
-
 /* Efeito de sombra retirado do exemplo do W3School box-shadow */
 .login-forms {
   align-items: center;
