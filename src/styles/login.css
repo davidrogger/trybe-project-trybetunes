@@ -1,3 +1,8 @@
+.login-container {
+  margin: auto;
+}
+
+
 /* Efeito de sombra retirado do exemplo do W3School box-shadow */
 .login-forms {
   align-items: center;
@@ -7,6 +12,7 @@
   flex-direction: column;
   height: 220px;
   justify-content: center;
+  margin: auto;
   width: 450px;
 }
 
