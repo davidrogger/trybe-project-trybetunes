@@ -21,5 +21,10 @@
 }
 
 input, button {
+  border-radius: 5px;
   height: 30px;
+}
+
+button {
+  border: none;
 }

@@ -11,10 +11,11 @@ import Search from './pages/Search';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 
-// Estilização
+// Estilos
 import './styles/login.css';
 import './styles/header.css';
 import './styles/general.css';
+import './styles/search.css';
 
 class App extends Component {
   constructor(props) {
