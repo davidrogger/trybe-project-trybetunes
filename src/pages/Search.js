@@ -6,6 +6,8 @@ import searchAlbumAPIs from '../services/searchAlbumsAPI';
 
 // Componentes
 import Header from '../components/Header';
+import Loading from '../components/Loading';
+import AlbumCard from '../components/AlbumCard';
 
 class Search extends Component {
   constructor(props) {
@@ -15,6 +17,8 @@ class Search extends Component {
       searchFor: '',
       buttonDisable: true,
       searchLoading: false,
+      currentSearch: '',
+      searchList: [],
     };
   }
 
@@ -34,20 +38,31 @@ searchStateUpdate = ({ target }) => {
     });
   }
 
-  searchAlbuns = async () => {
+  searchAlbuns = () => {
     const { searchFor } = this.state;
-    this.setState({ searchFor: '' });
-
-    const searchResponse = await searchAlbumAPIs(searchFor);
-    console.log(searchResponse);
+    this.setState({
+      searchFor: '',
+      searchLoading: true,
+    }, async () => {
+      const searchResponse = await searchAlbumAPIs(searchFor);
+      console.log(searchResponse);
+      this.setState({
+        searchLoading: false,
+        searchList: searchResponse,
+        currentSearch: searchFor,
+      });
+    });
   }
 
   render() {
-    const { searchFor, buttonDisable, searchLoading } = this.state;
+    const { searchFor, buttonDisable, searchLoading,
+      currentSearch, searchList } = this.state;
+
     return (
       <section data-testid="page-search" className="top-container">
         <Header />
-        <section className="search-container">
+
+        <section className="search-input-container">
 
           <input
             type="text"
@@ -67,8 +82,21 @@ searchStateUpdate = ({ target }) => {
             Pesquisar
 
           </button>
-
         </section>
+
+        { searchLoading ? <Loading /> : currentSearch && (
+          <section className="current-search">
+            <h1>{`Resultado de aĺbuns: ${currentSearch}`}</h1>
+
+            <section className="current-search">
+              {searchList.map((album) => (
+                <AlbumCard
+                  key={ album.collectionId }
+                  searchData={ album }
+                />))}
+            </section>
+
+          </section>)}
       </section>
     );
   }
