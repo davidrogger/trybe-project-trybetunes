@@ -11,6 +11,11 @@ import Search from './pages/Search';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 
+// Estilização
+import './styles/login.css';
+import './styles/header.css';
+import './styles/general.css';
+
 class App extends Component {
   constructor(props) {
     super(props);
