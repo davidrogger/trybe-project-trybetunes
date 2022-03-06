@@ -22,9 +22,18 @@
 
 input, button {
   border-radius: 5px;
+  box-sizing: border-box;
   height: 30px;
 }
 
 button {
   border: none;
+}
+
+input {
+  padding: 15px;
+}
+
+button:disabled {
+  opacity: 40%;
 }

@@ -16,15 +16,7 @@
   width: 80%;
 }
 
-.login-forms input {
-  padding: 15px;
-}
-
 .login-container h1 {
   margin-bottom: 50px;
   text-align: center;
-}
-
-.login-forms button:disabled {
-  opacity: 40%;
 }
