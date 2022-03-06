@@ -1,6 +1,9 @@
 // Bibliotecas
 import React, { Component } from 'react';
 
+// Serviços
+import searchAlbumAPIs from '../services/searchAlbumsAPI';
+
 // Componentes
 import Header from '../components/Header';
 
@@ -11,6 +14,7 @@ class Search extends Component {
     this.state = {
       searchFor: '',
       buttonDisable: true,
+      searchLoading: false,
     };
   }
 
@@ -30,8 +34,16 @@ searchStateUpdate = ({ target }) => {
     });
   }
 
+  searchAlbuns = async () => {
+    const { searchFor } = this.state;
+    this.setState({ searchFor: '' });
+
+    const searchResponse = await searchAlbumAPIs(searchFor);
+    console.log(searchResponse);
+  }
+
   render() {
-    const { searchFor, buttonDisable } = this.state;
+    const { searchFor, buttonDisable, searchLoading } = this.state;
     return (
       <section data-testid="page-search" className="top-container">
         <Header />
@@ -49,6 +61,7 @@ searchStateUpdate = ({ target }) => {
             type="button"
             className="blue-button"
             data-testid="search-artist-button"
+            onClick={ this.searchAlbuns }
             disabled={ buttonDisable }
           >
             Pesquisar
