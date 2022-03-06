@@ -7,7 +7,7 @@ import Header from '../components/Header';
 class Profile extends Component {
   render() {
     return (
-      <section data-testid="page-profile" className="large-width">
+      <section data-testid="page-profile" className="top-container">
         <h1>Profile</h1>
         <Header />
       </section>

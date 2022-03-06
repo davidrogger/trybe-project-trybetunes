@@ -1,5 +1,6 @@
 // Bibliotecas
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 // Serviços
 import { getUser } from '../services/userAPI';
@@ -33,11 +34,18 @@ class Header extends Component {
   render() {
     const { userName, headerLoading } = this.state;
     return headerLoading ? <Loading /> : (
-      <header data-testid="header-component" className="header-container large-width">
-        <h1>trybe tunes</h1>
-        <section>
-          <h2 data-testid="header-user-name">{userName}</h2>
+      <header data-testid="header-component" className="header-container top-container">
+        <section className="header-title">
+          <h1>trybe tunes</h1>
+          <section>
+            <h2 data-testid="header-user-name">{userName}</h2>
+          </section>
         </section>
+        <ul className="nav-container">
+          <Link to="/search" data-testid="link-to-search"><li>Pesquisa</li></Link>
+          <Link to="/favorites" data-testid="link-to-favorites"><li>Favoritos</li></Link>
+          <Link to="/profile" data-testid="link-to-profile"><li>Perfil</li></Link>
+        </ul>
       </header>
     );
   }

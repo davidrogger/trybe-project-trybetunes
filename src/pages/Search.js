@@ -7,7 +7,7 @@ import Header from '../components/Header';
 class Search extends Component {
   render() {
     return (
-      <section data-testid="page-search" className="search-container large-width">
+      <section data-testid="page-search" className="search-container top-container">
         <Header />
       </section>
     );
