@@ -8,8 +8,11 @@ class AlbumCard extends Component {
     return (
       <section className="album-card">
         <img src={ artworkUrl100 } alt={ collectionName } />
-        {collectionName}
-        {artistName}
+
+        <section className="album-cover">
+          <strong>{collectionName}</strong>
+          <p>{artistName}</p>
+        </section>
       </section>
     );
   }

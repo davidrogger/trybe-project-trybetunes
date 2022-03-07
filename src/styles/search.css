@@ -17,20 +17,34 @@
   border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .album-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  height: 200px;
+  height: 300px;
   margin: 15px;
-  width: 200px;
+  width: 250px;
+}
+
+.album-card img, .album-card {
+  border-radius: 5px;
 }
 
 .album-card img {
+  height: 50%;
   object-fit: cover;
   width: 100%;
+}
+
+.album-cover {
+  margin: 15px 20px;
+}
+
+.album-cover p {
+  margin-top: 15px;
 }
 
 .search-results {
