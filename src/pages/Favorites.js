@@ -8,8 +8,8 @@ class Favorites extends Component {
   render() {
     return (
       <section data-testid="page-favorites" className="top-container">
-        <h1>Favorites</h1>
         <Header />
+        <h1>Favorites</h1>
       </section>
     );
   }

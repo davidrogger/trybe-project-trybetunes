@@ -1,6 +1,7 @@
 .search-input-container {
   display: flex;
   justify-content: center;
+  margin: 50px 0;
 }
 
 .search-input-container input {
