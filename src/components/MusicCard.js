@@ -6,7 +6,7 @@ class MusicCard extends Component {
     const { musicTrack, trackName } = this.props;
 
     return (
-      <li>
+      <li className="album-track">
         {trackName}
         <audio data-testid="audio-component" src={ musicTrack } controls>
           <track kind="captions" />
@@ -15,6 +15,7 @@ class MusicCard extends Component {
           <code>audio</code>
           .
         </audio>
+        <input type="checkbox" />
       </li>
     );
   }

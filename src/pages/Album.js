@@ -17,6 +17,7 @@ class Album extends Component {
     this.state = {
       artistName: '',
       collectionName: '',
+      artworkIMG: '',
       albumLoading: true,
       musicList: [],
     };
@@ -29,19 +30,23 @@ class Album extends Component {
   gettingAlbumMusics = async () => {
     const { match: { params: { id } } } = this.props;
     const musicsResponse = await getMusics(id);
-    const { artistName, collectionName } = musicsResponse[0];
+    const { artistName, collectionName, artworkUrl100 } = musicsResponse[0];
+    console.log(musicsResponse[0]);
+    console.log(musicsResponse[1]);
     const justTrackMusics = musicsResponse
       .filter(({ kind }) => kind === 'song');
     this.setState({
       artistName,
       collectionName,
+      artworkIMG: artworkUrl100,
       albumLoading: false,
       musicList: justTrackMusics,
     });
   }
 
   render() {
-    const { artistName, collectionName, musicList, albumLoading } = this.state;
+    const { artistName, collectionName, musicList, albumLoading,
+      artworkIMG } = this.state;
     return (
       <section data-testid="page-album" className="top-container">
         <Header />
@@ -51,16 +56,17 @@ class Album extends Component {
           : (
             <section className="album-detail">
               <section className="album-side-container">
+                <img src={ artworkIMG } alt={ collectionName } />
                 <p data-testid="artist-name">{artistName}</p>
                 <p data-testid="album-name">{collectionName}</p>
               </section>
-              <section className="album-playlist">
+              <ul className="album-playlist">
                 {musicList.map(({ previewUrl, trackId, trackName }) => (<MusicCard
                   key={ trackId }
                   musicTrack={ previewUrl }
                   trackName={ trackName }
                 />))}
-              </section>
+              </ul>
             </section>)}
 
       </section>

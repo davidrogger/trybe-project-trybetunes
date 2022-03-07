@@ -1,0 +1,20 @@
+.album-detail {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 80px auto;
+  width: 850px;
+}
+
+.album-playlist {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.album-track {
+  align-items: center;
+  display: flex;
+  margin: 10px;
+}
