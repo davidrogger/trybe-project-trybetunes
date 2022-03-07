@@ -9,6 +9,7 @@ import MusicCard from '../components/MusicCard';
 
 // Serviços
 import getMusics from '../services/musicsAPI';
+import { addSong, removeSong } from '../services/favoriteSongsAPI';
 
 class Album extends Component {
   constructor(props) {
@@ -31,8 +32,6 @@ class Album extends Component {
     const { match: { params: { id } } } = this.props;
     const musicsResponse = await getMusics(id);
     const { artistName, collectionName, artworkUrl100 } = musicsResponse[0];
-    console.log(musicsResponse[0]);
-    console.log(musicsResponse[1]);
     const justTrackMusics = musicsResponse
       .filter(({ kind }) => kind === 'song');
     this.setState({
@@ -44,34 +43,51 @@ class Album extends Component {
     });
   }
 
-  render() {
-    const { artistName, collectionName, musicList, albumLoading,
-      artworkIMG } = this.state;
-    return (
-      <section data-testid="page-album" className="top-container">
-        <Header />
-
-        { albumLoading
-          ? <Loading />
-          : (
-            <section className="album-detail">
-              <section className="album-side-container">
-                <img src={ artworkIMG } alt={ collectionName } />
-                <p data-testid="artist-name">{artistName}</p>
-                <p data-testid="album-name">{collectionName}</p>
-              </section>
-              <ul className="album-playlist">
-                {musicList.map(({ previewUrl, trackId, trackName }) => (<MusicCard
-                  key={ trackId }
-                  musicTrack={ previewUrl }
-                  trackName={ trackName }
-                />))}
-              </ul>
-            </section>)}
-
-      </section>
-    );
+favoriteSong = async (id, checkBox) => {
+  const { musicList } = this.state;
+  const favorite = musicList.find(({ trackId }) => trackId === id);
+  this.setState({ albumLoading: true });
+  if (checkBox) {
+    await addSong(favorite);
+    console.log('adicionou');
   }
+  if (!checkBox) {
+    await removeSong(favorite);
+    console.log('removeu');
+  }
+  this.setState({ albumLoading: false });
+}
+
+render() {
+  const { artistName, collectionName, musicList, albumLoading,
+    artworkIMG } = this.state;
+  return (
+    <section data-testid="page-album" className="top-container">
+      <Header />
+
+      { albumLoading
+        ? <Loading />
+        : (
+          <section className="album-detail">
+            <section className="album-side-container">
+              <img src={ artworkIMG } alt={ collectionName } />
+              <p data-testid="artist-name">{artistName}</p>
+              <p data-testid="album-name">{collectionName}</p>
+            </section>
+            <ul className="album-playlist">
+              {musicList.map(({ previewUrl, trackId, trackName }) => (<MusicCard
+                key={ trackId }
+                musicTrack={ previewUrl }
+                trackName={ trackName }
+                trackId={ trackId }
+                favoriteSong={ this.favoriteSong }
+              />))}
+            </ul>
+          </section>)}
+
+    </section>
+  );
+}
 }
 
 Album.propTypes = {
