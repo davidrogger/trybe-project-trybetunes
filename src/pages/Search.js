@@ -1,6 +1,5 @@
 // Bibliotecas
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 // Serviços
 import searchAlbumAPIs from '../services/searchAlbumsAPI';
@@ -43,10 +42,10 @@ searchStateUpdate = ({ target }) => {
     const { searchFor } = this.state;
     this.setState({
       searchFor: '',
+      buttonDisable: true,
       searchLoading: true,
     }, async () => {
       const searchResponse = await searchAlbumAPIs(searchFor);
-      console.log(searchResponse);
       this.setState({
         searchLoading: false,
         searchList: searchResponse,
@@ -90,14 +89,15 @@ searchStateUpdate = ({ target }) => {
             <p>{`Resultado de álbuns de: ${currentSearch}`}</p>
 
             <section className="current-search-display">
+
               {searchList.length === 0
-                ? (<h1> Nenhum Album Foi encontrado </h1>)
+                ? (<p>Nenhum Album Foi encontrado</p>)
                 : searchList.map((album) => (
-                  <Link to={ `/album/${album.collectionId}` } key={ album.collectionId }>
-                    <AlbumCard
-                      searchData={ album }
-                    />
-                  </Link>
+
+                  <AlbumCard
+                    searchData={ album }
+                    key={ `album-key-${album.collectionId}` }
+                  />
                 ))}
             </section>
 
