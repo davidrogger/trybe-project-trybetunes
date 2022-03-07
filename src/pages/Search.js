@@ -86,9 +86,9 @@ searchStateUpdate = ({ target }) => {
 
         { searchLoading ? <Loading /> : currentSearch && (
           <section className="current-search">
-            <h1>{`Resultado de aĺbuns: ${currentSearch}`}</h1>
+            <p>{`Resultado de álbuns de: ${currentSearch}`}</p>
 
-            <section className="current-search">
+            <section className="current-search-display">
               {searchList.map((album) => (
                 <AlbumCard
                   key={ album.collectionId }
