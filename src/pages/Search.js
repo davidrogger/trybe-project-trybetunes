@@ -54,6 +54,29 @@ searchStateUpdate = ({ target }) => {
     });
   }
 
+  searchDisplay = (searchList, currentSearch) => {
+    if (searchList.length === 0) {
+      return <p>Nenhum álbum foi encontrado</p>;
+    }
+    return (
+      <section className="current-search">
+
+        <p>{`Resultado de álbuns de: ${currentSearch}`}</p>
+
+        <section className="current-search-display">
+
+          {searchList.map((album) => (
+
+            <AlbumCard
+              searchData={ album }
+              key={ `album-key-${album.collectionId}` }
+            />
+          ))}
+        </section>
+
+      </section>);
+  }
+
   render() {
     const { searchFor, buttonDisable, searchLoading,
       currentSearch, searchList } = this.state;
@@ -84,24 +107,9 @@ searchStateUpdate = ({ target }) => {
           </button>
         </section>
 
-        { searchLoading ? <Loading /> : currentSearch && (
-          <section className="current-search">
-            <p>{`Resultado de álbuns de: ${currentSearch}`}</p>
-
-            <section className="current-search-display">
-
-              {searchList.length === 0
-                ? (<p>Nenhum Album Foi encontrado</p>)
-                : searchList.map((album) => (
-
-                  <AlbumCard
-                    searchData={ album }
-                    key={ `album-key-${album.collectionId}` }
-                  />
-                ))}
-            </section>
-
-          </section>)}
+        { searchLoading
+          ? <Loading />
+          : currentSearch && this.searchDisplay(searchList, currentSearch)}
       </section>
     );
   }
