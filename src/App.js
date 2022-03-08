@@ -17,6 +17,7 @@ import './styles/header.css';
 import './styles/general.css';
 import './styles/search.css';
 import './styles/album.css';
+import './styles/loading.css';
 
 class App extends Component {
   constructor(props) {

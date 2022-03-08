@@ -52,12 +52,12 @@ render() {
       : (
         <li className="album-track">
           {trackName}
-          <audio data-testid="audio-component" src={ musicTrack } controls>
+          <audio
+            data-testid="audio-component"
+            src={ musicTrack }
+            controls
+          >
             <track kind="captions" />
-            O seu navegador não suporta o elemento
-            {' '}
-            <code>audio</code>
-            .
           </audio>
           <label htmlFor={ `favorite-music-${trackId}` }>
             Favorita

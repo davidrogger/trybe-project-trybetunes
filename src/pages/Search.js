@@ -59,7 +59,7 @@ searchStateUpdate = ({ target }) => {
       return <p>Nenhum álbum foi encontrado</p>;
     }
     return (
-      <section className="current-search">
+      <>
 
         <p>{`Resultado de álbuns de: ${currentSearch}`}</p>
 
@@ -74,7 +74,7 @@ searchStateUpdate = ({ target }) => {
           ))}
         </section>
 
-      </section>);
+      </>);
   }
 
   render() {
@@ -111,6 +111,7 @@ searchStateUpdate = ({ target }) => {
           ? <Loading />
           : currentSearch && this.searchDisplay(searchList, currentSearch)}
       </section>
+
     );
   }
 }

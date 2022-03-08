@@ -3,11 +3,9 @@
   padding: 0;
 }
 
-/* .header-container {
-  position: absolute;
-  text-align: center;
-  top: 0;
-} */
+.header-container {
+  height: 100px;
+}
 
 .header-title {
   align-items: center;
@@ -15,7 +13,7 @@
   border-bottom: 2px solid rgba(128, 128, 128, 0.1);
   color: white;
   display: flex;
-  height: 50px;
+  height: 50%;
   justify-content: space-between;
 }
 
@@ -25,7 +23,7 @@
   border-bottom: 2px solid rgba(128, 128, 128, 0.1);
   display: flex;
   font-size: 20px;
-  height: 50px;
+  height: 50%;
   justify-content: space-around;
   list-style-type: none;
 }

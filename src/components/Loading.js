@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 
 class Profile extends Component {
   render() {
-    return <h1>Carregando...</h1>;
+    return (
+      <section className="loading-container">
+        <h1>Carregando...</h1>
+      </section>
+    );
   }
 }
 

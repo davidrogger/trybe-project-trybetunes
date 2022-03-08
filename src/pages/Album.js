@@ -49,11 +49,9 @@ favoriteSong = async (id, checkBox) => {
   this.setState({ albumLoading: true });
   if (checkBox) {
     await addSong(favorite);
-    console.log('adicionou');
   }
   if (!checkBox) {
     await removeSong(favorite);
-    console.log('removeu');
   }
   this.setState({ albumLoading: false });
 }
@@ -65,26 +63,28 @@ render() {
     <section data-testid="page-album" className="top-container">
       <Header />
 
-      { albumLoading
-        ? <Loading />
-        : (
-          <section className="album-detail">
-            <section className="album-side-container">
-              <img src={ artworkIMG } alt={ collectionName } />
-              <p data-testid="artist-name">{artistName}</p>
-              <p data-testid="album-name">{collectionName}</p>
-            </section>
-            <ul className="album-playlist">
-              {musicList.map(({ previewUrl, trackId, trackName }) => (<MusicCard
-                key={ trackId }
-                musicTrack={ previewUrl }
-                trackName={ trackName }
-                trackId={ trackId }
-                favoriteSong={ this.favoriteSong }
-              />))}
-            </ul>
-          </section>)}
-
+      <section className="album-detail">
+        { albumLoading
+          ? <Loading />
+          : (
+            <>
+              <section className="album-side-container">
+                <img src={ artworkIMG } alt={ collectionName } />
+                <p data-testid="artist-name">{artistName}</p>
+                <p data-testid="album-name">{collectionName}</p>
+              </section>
+              <ul className="album-playlist">
+                {musicList.map(({ previewUrl, trackId, trackName }) => (
+                  <MusicCard
+                    key={ trackId }
+                    musicTrack={ previewUrl }
+                    trackName={ trackName }
+                    trackId={ trackId }
+                    favoriteSong={ this.favoriteSong }
+                  />))}
+              </ul>
+            </>)}
+      </section>
     </section>
   );
 }
