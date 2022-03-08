@@ -8,8 +8,8 @@ class ProfileEdit extends Component {
   render() {
     return (
       <section data-testid="page-profile-edit" className="top-container">
-        <h1>Profile-edit</h1>
         <Header />
+        <h1>Profile-edit</h1>
       </section>
     );
   }

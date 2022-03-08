@@ -7,8 +7,7 @@ import MusicCard from '../components/MusicCard';
 import Loading from '../components/Loading';
 
 // Serviços
-
-import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+import { getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
 
 class Favorites extends Component {
   constructor(props) {
@@ -32,8 +31,18 @@ class Favorites extends Component {
     });
   }
 
+  favoriteSong = async (id) => {
+    const { favoriteList } = this.state;
+    const favorite = favoriteList.find(({ trackId }) => trackId === id);
+    this.setState({ favoriteLoading: true });
+
+    await removeSong(favorite);
+    this.favoriteRecovery();
+  }
+
   render() {
     const { favoriteList, favoriteLoading } = this.state;
+    console.log(favoriteList);
     return (
       <section data-testid="page-favorites" className="top-container">
         <Header />
