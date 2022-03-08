@@ -33,30 +33,37 @@ userLogged = async () => {
 
 profileDisplay = () => {
   const { userData } = this.state;
-  console.log(userData);
+  // console.log(userData);
   return (
     <>
-      <div>
-        <img
-          data-testid="profile-image"
-          src={ userData.image }
-          alt={ `avatar-${userData.name}` }
-        />
-        <Link to="/profile/edit">
-          <button type="button">Editar perfil</button>
-        </Link>
+      <div className="profile-top-container">
+        <div className="profile-img-container">
+          <img
+            data-testid="profile-image"
+            src={ userData.image }
+            alt={ `avatar-${userData.name}` }
+          />
+        </div>
+        <div className="profile-button-container">
+          <Link to="/profile/edit">
+            <button type="button">Editar perfil</button>
+          </Link>
+        </div>
       </div>
-      <div>
-        Nome:
-        <p>{ userData.name }</p>
-      </div>
-      <div>
-        E-mail:
-        { userData.email }
-      </div>
-      <div>
-        Descrição:
-        { userData.description }
+      <div className="profile-info-container">
+        <div>
+          <strong>Nome:</strong>
+          <p>{ userData.name }</p>
+        </div>
+        <div>
+          <strong>E-mail:</strong>
+          <p>{ userData.email }</p>
+        </div>
+        <div>
+          <strong>Descrição:</strong>
+          <p>{ userData.description }</p>
+        </div>
+
       </div>
     </>
   );
