@@ -18,3 +18,14 @@
   display: flex;
   margin: 10px;
 }
+
+.favorite-container {
+  display: flex;
+  margin: 25px 0;
+}
+
+.favorite-container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}

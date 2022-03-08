@@ -40,7 +40,7 @@ class Favorites extends Component {
         {favoriteLoading
           ? <Loading />
           : (
-            <section>
+            <section className="favorite-container">
               Músicas favoritas:
               <ul>
                 {favoriteList.map(({ previewUrl, trackId, trackName }) => (<MusicCard
