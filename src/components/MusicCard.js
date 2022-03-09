@@ -59,7 +59,7 @@ render() {
           >
             <track kind="captions" />
           </audio>
-          <label htmlFor={ `favorite-music-${trackId}` }>
+          <label htmlFor={ trackId }>
             Favorita
             <input
               id={ trackId }
