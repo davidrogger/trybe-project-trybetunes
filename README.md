@@ -44,7 +44,20 @@
 ### Requisitos
 *Nome* | *Avaliação*
 --- | :---:
-1 - lore | :heavy_check_mark:
+1 - Crie as rotas necessárias para a aplicação | :heavy_check_mark:
+2 - Crie um formulário para identificação | :heavy_check_mark:
+3 - Crie um componente de cabeçalho | :heavy_check_mark:
+4 - Crie os links de navegação no cabeçalho | :heavy_check_mark:
+5 - Crie o formulário para pesquisar artistas | :heavy_check_mark:
+6 - Faça a requisição para pesquisar artistas | :heavy_check_mark:
+7 - Crie a lista de músicas do álbum selecionado | :heavy_check_mark:
+8 - Crie o mecanismo para adicionar músicas na lista de músicas favoritas | :heavy_check_mark:
+9 - Faça a requisição para recuperar as músicas favoritas ao entrar na página do Álbum | :heavy_check_mark:
+10 - Faça a requisição para recuperar as músicas favoritas e atualizar a lista após favoritar uma música | :heavy_check_mark:
+11 - Crie o mecanismo para remover músicas na lista de músicas favoritas | :heavy_check_mark:
+12 - Crie a lista de músicas favoritas | :heavy_check_mark:
+13 - Crie a exibição de perfil| :heavy_check_mark:
+14 - Crie o formulário de edição de perfil | :heavy_check_mark:
 
 
 
