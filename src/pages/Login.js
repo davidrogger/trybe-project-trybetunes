@@ -54,7 +54,6 @@ minNameLength = () => {
       <section data-testid="page-login" className="login-container">
         <img className="login-logo" src={ tunesLogo } alt="trybe tunes logo" />
         <section className="login-forms">
-
           <input
             type="text"
             placeholder="Nome"
@@ -72,7 +71,6 @@ minNameLength = () => {
           >
             Entrar
           </button>
-
         </section>
       </section>
     );
