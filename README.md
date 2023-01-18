@@ -15,7 +15,7 @@
 >*clique na imagem para acesso online do projeto*
 #
 ## Projeto: `Trybetunes`
-- lore
+- Desenvolver uma aplicação onde é inicialmente inserido o nome do usuário, que busca pelo nome da banda ou artitas, albuns relacionados, onde é possível ver seus albuns e pequenos fragmentos de som referentes aquele album coletados de uma API publica do itunes.
 
 # Tecnologias e ferramentas usadas 🛠
 
