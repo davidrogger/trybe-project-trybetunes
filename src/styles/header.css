@@ -33,9 +33,11 @@
   color: #29313d;
   display: flex;
   height: 45px;
-  justify-content: center;
+  justify-content: flex-end;
   margin-right: 50px;
-  width: 200px;
+  min-width: 50px;
+  padding-left: 45px;
+  position: relative;
 }
 
 .user-header-container span {
@@ -43,6 +45,16 @@
   font-style: normal;
   font-weight: 500;
   line-height: 18px;
+  margin-right: 15px;
+}
+
+.user-header-icon {
+  background-color: #2fc18c;
+  border-radius: 36px;
+  height: 36px;
+  left: 4px;
+  position: absolute;
+  width: 36px;
 }
 
 .nav-container {

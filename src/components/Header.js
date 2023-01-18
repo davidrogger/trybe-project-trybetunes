@@ -47,6 +47,7 @@ class Header extends Component {
                 <section
                   className="user-header-container"
                 >
+                  <div className="user-header-icon"> </div>
                   <span
                     data-testid="header-user-name"
                   >
