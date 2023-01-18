@@ -16,6 +16,7 @@
 #
 ## Projeto: `Trybetunes`
 - Desenvolver uma aplicação onde é inicialmente inserido o nome do usuário, que busca pelo nome da banda ou artitas, albuns relacionados, onde é possível ver seus albuns e pequenos fragmentos de som referentes aquele album coletados de uma API publica do itunes.
+>[Figma base para o desenvolvimento](https://www.figma.com/file/BDQgAJvOe4KNUjmrYh5t68/TrybeTunes-Figma?node-id=0%3A1)
 
 # Tecnologias e ferramentas usadas 🛠
 
