@@ -26,6 +26,25 @@
   position: relative;
 }
 
+.user-header-container {
+  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+  color: #29313d;
+  display: flex;
+  height: 45px;
+  justify-content: center;
+  margin-right: 50px;
+  width: 200px;
+}
+
+.user-header-container span {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+
 .nav-container {
   align-items: center;
   background-color: aliceblue;

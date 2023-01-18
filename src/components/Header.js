@@ -44,8 +44,15 @@ class Header extends Component {
             <>
               <section className="header-content">
                 <img className="header-logo" src={ tunesLogo } alt="Trybetunes logo" />
-                <section>
-                  <h2 data-testid="header-user-name">{userName}</h2>
+                <section
+                  className="user-header-container"
+                >
+                  <span
+                    data-testid="header-user-name"
+                  >
+                    {userName}
+
+                  </span>
                 </section>
               </section>
               <ul className="nav-container">
