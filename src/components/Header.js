@@ -8,6 +8,8 @@ import { getUser } from '../services/userAPI';
 // Componentes
 import Loading from './Loading';
 
+import tunesLogo from '../imgs/trybetunes_logo2.svg';
+
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -40,8 +42,8 @@ class Header extends Component {
           ? <Loading />
           : (
             <>
-              <section className="header-title">
-                <h1>trybe tunes</h1>
+              <section className="header-content">
+                <img className="header-logo" src={ tunesLogo } alt="Trybetunes logo" />
                 <section>
                   <h2 data-testid="header-user-name">{userName}</h2>
                 </section>
