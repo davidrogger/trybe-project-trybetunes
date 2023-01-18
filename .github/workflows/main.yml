@@ -8,17 +8,20 @@ on:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
-    container:
-      image: node:16
 
     steps:
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: Use Node.js 16
+      uses: actions/setup-node@v1
+      with:
+        node-version: 16
+
     - name: Update README
       run: |
         DATE=`date +%d-%m-%Y`
-        sed -i "s/{_DATE_}/$DATE/" README.md
+        sed -i "{_DATE_}/$DATE/" README.md
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
         git add README.md
