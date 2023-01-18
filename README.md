@@ -24,7 +24,7 @@
 
 # Desafios
 
-- lore
+- Initialmente determinar as rotas, para cada funcionalidade diferentes para o "single page". Seguindo do uso ciclo de vida de cada componente, para gerar a frase de carregando na parte do usuário dos albuns e das músicas. A parte mais pesada do projeto foi o uso do CSS puro, isso gera uma falta de produtividade muito grande, mas como meu foco era aprender os elementos do CSS então mantive dessa forma.
 
 # Conclusão
 
