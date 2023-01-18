@@ -1,10 +1,49 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Sobre
+
+## Seção: `Ciclo de Vida de Componentes e React Router`
+- lore
+#
+<div align="center">
+  <a href="https://davidrogger.github.io/trybe-project-trybetunes>
+    <img width="30%" src="./imgs/project_trybetunes_top.webp">
+    <img width="30%" src="./imgs/project_trybetunes_mid.webp">
+    <img width="30%" src="./imgs/project_trybetunes_bottom.webp">
+  </a>
+</div>
+
+>*clique na imagem para acesso online do projeto*
+#
+## Projeto: `Trybetunes`
+- lore
+
+# Tecnologias e ferramentas usadas 🛠
+
+![React.js](https://img.shields.io/badge/-React.js-61DAFB?style=flat-square&logo=react&logoColor=ffffff)
+
+
+# Desafios
+
+- lore
+
+# Conclusão
+
+- lore
+
+</details>
+
+<details>
+  <summary>
+    <strong>
+      :newspaper_roll: Requisitos solicitados durante o desenvolvimento do projeto
+    </strong>
+  </summary>
+
+ 
+### Requisitos
+*Nome* | *Avaliação*
+--- | :---:
+1 - lore | :heavy_check_mark:
+
+
+
+</details>
