@@ -52,7 +52,7 @@ minNameLength = () => {
     const { userName, buttonDisable, loading } = this.state;
     return loading ? <Loading /> : (
       <section data-testid="page-login" className="login-container">
-        <img src={ tunesLogo } alt="trybe tunes logo" />
+        <img className="login-logo" src={ tunesLogo } alt="trybe tunes logo" />
         <section className="login-forms">
 
           <input
