@@ -65,4 +65,6 @@
 
 #
 
-![Last Update](https://badgen.net/badge/last%20update/18-01-2023/blue)
+<div align="right">
+  <img src="https://badgen.net/badge/last%20update/18-01-2023/blue">
+</div>
