@@ -1,7 +1,8 @@
 # Sobre
 
 ## Seção: `Ciclo de Vida de Componentes e React Router`
-- lore
+- Nessa seção foi apresentado metodos existentes para lidar com com ciclo de vida de elementos no react, componentDidMount, componentDidUpdate, componentWillUnmount, etc...
+- Quando cada metodo é chamado dependendo da ação sobre o componente, sendo apresentando o melhor metodo para se usar para realizar requisições para um API lidando melhor com assincronicidade. Também apresenteado o React route, ja que o react é uma aplicação chamada de "Single page application" onde tudo é renderizado em uma mesma página, tornando a experiência durante a o uso, mais fluida, sem recarregamento da página.
 #
 <div align="center">
   <a href="https://davidrogger.github.io/trybe-project-trybetunes>
