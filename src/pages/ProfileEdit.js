@@ -79,7 +79,6 @@ class ProfileEdit extends Component {
             />
           </div>
           <div className="profile-button-container">
-
             <input
               data-testid="edit-input-image"
               type="text"
