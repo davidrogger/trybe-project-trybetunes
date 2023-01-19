@@ -9,6 +9,8 @@ import Loading from '../components/Loading';
 // Serviços
 import { getUser, updateUser } from '../services/userAPI';
 
+import defaultAvatar from '../imgs/default_avatar.svg';
+
 class ProfileEdit extends Component {
   constructor(props) {
     super(props);
@@ -72,7 +74,7 @@ class ProfileEdit extends Component {
           <div className="profile-img-container">
             <img
               data-testid="profile-image"
-              src={ userData.image }
+              src={ userData.image || defaultAvatar }
               alt={ `avatar-${userData.name}` }
             />
           </div>
