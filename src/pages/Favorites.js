@@ -46,7 +46,7 @@ class Favorites extends Component {
       favoriteList.length === 0
         ? (<h1>Não existem músicas favorista ainda</h1>)
         : (
-          <section className="favorite-background-container">
+          <>
             <h2>
               Músicas favoritas:
             </h2>
@@ -63,7 +63,7 @@ class Favorites extends Component {
                   favoritePage
                 />))}
             </ul>
-          </section>
+          </>
         )
     );
   }
@@ -74,9 +74,11 @@ class Favorites extends Component {
     return (
       <section data-testid="page-favorites" className="top-container">
         <Header />
-        {favoriteLoading
-          ? <Loading />
-          : this.favoriteDisplay() }
+        <section className="favorite-background-container">
+          {favoriteLoading
+            ? <Loading />
+            : this.favoriteDisplay() }
+        </section>
       </section>
     );
   }
