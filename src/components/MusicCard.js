@@ -43,7 +43,10 @@ favoriteCheckBox = ({ target }) => {
 }
 
 render() {
-  const { musicTrack, trackName, trackId } = this.props;
+  const {
+    musicTrack, trackName, trackId, artworkUrl100, favoritePage = false,
+  } = this.props;
+
   const { favorite, trackLoading } = this.state;
 
   return (
@@ -51,7 +54,10 @@ render() {
       ? <Loading />
       : (
         <li className="album-track">
-          {trackName}
+          { favoritePage && (<img src={ artworkUrl100 } alt="Imagem do album" />) }
+          <span>
+            {trackName}
+          </span>
           <section>
             <audio
               data-testid="audio-component"
@@ -77,10 +83,12 @@ render() {
 }
 
 MusicCard.propTypes = {
-  musicTrack: PropTypes.string.isRequired,
-  trackName: PropTypes.string.isRequired,
-  trackId: PropTypes.number.isRequired,
-  favoriteSong: PropTypes.func.isRequired,
-};
+  musicTrack: PropTypes.string,
+  trackName: PropTypes.string,
+  trackId: PropTypes.number,
+  favoriteSong: PropTypes.func,
+  artworkUrl100: PropTypes.string,
+  isFavoritePage: PropTypes.bool,
+}.isRequired;
 
 export default MusicCard;

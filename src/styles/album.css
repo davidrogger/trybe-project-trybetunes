@@ -42,13 +42,36 @@
   width: 100%;
 }
 
-.favorite-container {
-  display: flex;
-  margin: 25px 0;
-}
-
-.favorite-container ul {
-  align-items: flex-end;
+.favorite-background-container {
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
+  position: relative;
+}
+
+.favorite-background-container h2 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  left: 8%;
+  position: absolute;
+}
+
+.favorite-background-container ul {
+  align-items: flex-end;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+  margin-top: 50px;
+}
+
+.album-track span {
+  max-width: 150px;
+  padding: 30px;
+}
+
+.favorite-background-container img {
+  border-radius: 100%;
+  width: 60px;
 }

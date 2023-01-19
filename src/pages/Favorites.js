@@ -46,16 +46,21 @@ class Favorites extends Component {
       favoriteList.length === 0
         ? (<h1>Não existem músicas favorista ainda</h1>)
         : (
-          <section className="favorite-container">
-            Músicas favoritas:
+          <section className="favorite-background-container">
+            <h2>
+              Músicas favoritas:
+            </h2>
             <ul>
-              {favoriteList.map(({ previewUrl, trackId, trackName }) => (<MusicCard
-                key={ trackId }
-                musicTrack={ previewUrl }
-                trackName={ trackName }
-                trackId={ trackId }
-                favoriteSong={ this.favoriteSong }
-              />))}
+              {favoriteList
+                .map(({ previewUrl, trackId, trackName, artworkUrl100 }) => (<MusicCard
+                  key={ trackId }
+                  musicTrack={ previewUrl }
+                  trackName={ trackName }
+                  artworkUrl100={ artworkUrl100 }
+                  trackId={ trackId }
+                  favoriteSong={ this.favoriteSong }
+                  favoritePage
+                />))}
             </ul>
           </section>
         )
