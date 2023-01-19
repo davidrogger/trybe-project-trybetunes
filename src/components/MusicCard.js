@@ -52,23 +52,25 @@ render() {
       : (
         <li className="album-track">
           {trackName}
-          <audio
-            data-testid="audio-component"
-            src={ musicTrack }
-            controls
-          >
-            <track kind="captions" />
-          </audio>
-          <label htmlFor={ trackId }>
-            Favorita
-            <input
-              id={ trackId }
-              type="checkbox"
-              checked={ favorite }
-              onChange={ this.favoriteCheckBox }
-              data-testid={ `checkbox-music-${trackId}` }
-            />
-          </label>
+          <section>
+            <audio
+              data-testid="audio-component"
+              src={ musicTrack }
+              controls
+            >
+              <track kind="captions" />
+            </audio>
+            <label htmlFor={ trackId }>
+              Favorita
+              <input
+                id={ trackId }
+                type="checkbox"
+                checked={ favorite }
+                onChange={ this.favoriteCheckBox }
+                data-testid={ `checkbox-music-${trackId}` }
+              />
+            </label>
+          </section>
         </li>)
   );
 }

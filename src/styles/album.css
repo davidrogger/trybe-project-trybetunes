@@ -3,17 +3,18 @@
   justify-content: center;
   margin-top: 50px;
   min-height: 50vh;
+  padding-bottom: 200px;
 }
 
 .album-detail {
-  background-color: antiquewhite;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
-  width: 850px;
+  min-width: 850px;
 }
 
 .album-details-left-container {
+  padding-right: 50px;
   width: 290px;
 }
 
@@ -33,8 +34,12 @@
 
 .album-track {
   align-items: center;
+  border-bottom: 1px solid #e1e5eb;
+  border-top: 1px solid #e1e5eb;
   display: flex;
-  margin: 10px;
+  height: 100px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .favorite-container {
