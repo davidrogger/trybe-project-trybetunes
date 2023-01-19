@@ -7,7 +7,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 
 // Componentes
-import Loading from './Loading';
+import Loading from './Loading2';
 
 import tunesLogo from '../imgs/trybetunes_logo2.svg';
 
