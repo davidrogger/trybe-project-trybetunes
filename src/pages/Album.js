@@ -68,10 +68,10 @@ render() {
             ? <Loading />
             : (
               <>
-                <section className="album-side-container">
+                <section className="album-details-left-container">
                   <img src={ artworkIMG } alt={ collectionName } />
-                  <p data-testid="artist-name">{artistName}</p>
-                  <p data-testid="album-name">{collectionName}</p>
+                  <h3 data-testid="artist-name">{artistName}</h3>
+                  <span data-testid="album-name">{collectionName}</span>
                 </section>
                 <ul className="album-playlist">
                   {musicList.map(({ previewUrl, trackId, trackName }) => (
