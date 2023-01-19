@@ -56,17 +56,18 @@ searchStateUpdate = ({ target }) => {
 
   searchDisplay = (searchList, currentSearch) => {
     if (searchList.length === 0) {
-      return <p>Nenhum álbum foi encontrado</p>;
+      return (
+        <span
+          className="album-not-found"
+        >
+          Nenhum álbum foi encontrado
+        </span>);
     }
     return (
-      <>
-
-        <p>{`Resultado de álbuns de: ${currentSearch}`}</p>
-
-        <section className="current-search-display">
-
+      <section className="search-container">
+        <span>{`Resultado de álbuns de: ${currentSearch}`}</span>
+        <section className="albuns-found-container">
           {searchList.map((album) => (
-
             <AlbumCard
               searchData={ album }
               key={ `album-key-${album.collectionId}` }
@@ -74,7 +75,7 @@ searchStateUpdate = ({ target }) => {
           ))}
         </section>
 
-      </>);
+      </section>);
   }
 
   render() {

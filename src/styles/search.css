@@ -13,13 +13,13 @@
   width: 100px;
 }
 
-.current-search-display {
+.albuns-found-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.current-search-display a {
+.albuns-found-container a {
   color: black;
   text-decoration: none;
 }
@@ -49,4 +49,16 @@
 
 .album-cover p {
   margin-top: 15px;
+}
+
+.album-not-found {
+  color: #023031;
+  display: flex;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 300;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  line-height: 65px;
+  width: 100%;
 }
