@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { Heart } from 'phosphor-react';
 
 // Componentes
 import Loading from './Loading';
@@ -33,13 +34,14 @@ isFavorite = async () => {
   });
 }
 
-favoriteCheckBox = ({ target }) => {
+favoriteCheckBox = (trackId) => {
   const { favoriteSong } = this.props;
+  const { favorite } = this.state;
   this.setState((prevState) => ({
     favorite: !prevState.favorite,
   }));
-  const boxValue = target.checked;
-  const trackId = Number(target.id);
+  console.log(favorite);
+  const boxValue = !favorite;
   favoriteSong(trackId, boxValue);
 }
 
@@ -66,7 +68,9 @@ render() {
           <span>
             {trackName}
           </span>
-          <section>
+          <section
+            className="audio-container"
+          >
             <audio
               data-testid="audio-component"
               src={ musicTrack }
@@ -74,16 +78,12 @@ render() {
             >
               <track kind="captions" />
             </audio>
-            <label htmlFor={ trackId }>
-              Favorita
-              <input
-                id={ trackId }
-                type="checkbox"
-                checked={ favorite }
-                onChange={ this.favoriteCheckBox }
-                data-testid={ `checkbox-music-${trackId}` }
-              />
-            </label>
+            <Heart
+              size={ 25 }
+              weight={ favorite ? 'fill' : 'regular' }
+              id={ trackId }
+              onClick={ () => this.favoriteCheckBox(trackId) }
+            />
           </section>
         </li>)
   );

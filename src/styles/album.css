@@ -75,3 +75,12 @@
   border-radius: 100%;
   width: 60px;
 }
+
+.audio-container {
+  align-items: center;
+  display: flex;
+}
+
+.audio-container audio {
+  margin-right: 10px;
+}
