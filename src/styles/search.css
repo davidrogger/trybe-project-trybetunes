@@ -62,3 +62,11 @@
   line-height: 65px;
   width: 100%;
 }
+
+.album-result-title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+  width: 100%;
+}

@@ -65,7 +65,11 @@ searchStateUpdate = ({ target }) => {
     }
     return (
       <section className="search-container">
-        <span>{`Resultado de álbuns de: ${currentSearch}`}</span>
+        <span
+          className="album-result-title"
+        >
+          {`Resultado de álbuns de: ${currentSearch}`}
+        </span>
         <section className="albuns-found-container">
           {searchList.map((album) => (
             <AlbumCard
