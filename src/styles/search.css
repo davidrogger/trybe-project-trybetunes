@@ -25,12 +25,17 @@
 }
 
 .album-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border: 1px solid #e1e5eb;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06) , 0 1px 3px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  height: 300px;
+  gap: 16px;
+  height: 320px;
   margin: 15px;
-  width: 250px;
+  padding: 0 0 16px;
+  width: 290px;
 }
 
 .album-card img, .album-card {
@@ -69,4 +74,8 @@
   font-weight: 300;
   line-height: 25px;
   width: 100%;
+}
+
+.search-container {
+  margin: 0 10%;
 }
