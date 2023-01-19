@@ -69,8 +69,7 @@ class Favorites extends Component {
   }
 
   render() {
-    const { favoriteList, favoriteLoading } = this.state;
-    console.log(favoriteList);
+    const { favoriteLoading } = this.state;
     return (
       <section data-testid="page-favorites" className="top-container">
         <Header />

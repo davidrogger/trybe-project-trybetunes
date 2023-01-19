@@ -40,7 +40,6 @@ favoriteCheckBox = (trackId) => {
   this.setState((prevState) => ({
     favorite: !prevState.favorite,
   }));
-  console.log(favorite);
   const boxValue = !favorite;
   favoriteSong(trackId, boxValue);
 }

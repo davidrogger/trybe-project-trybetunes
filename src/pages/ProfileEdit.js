@@ -53,7 +53,6 @@ class ProfileEdit extends Component {
 
   formsStateUpdate = ({ target }) => {
     const { name, value } = target;
-    console.log(value);
     this.setState((prevState) => ({
       userData: { ...prevState.userData, [name]: value },
     }), () => this.validInput());
