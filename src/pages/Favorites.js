@@ -52,12 +52,13 @@ class Favorites extends Component {
             </h2>
             <ul>
               {favoriteList
-                .map(({ previewUrl, trackId, trackName, artworkUrl100 }) => (<MusicCard
-                  key={ trackId }
-                  musicTrack={ previewUrl }
-                  trackName={ trackName }
-                  artworkUrl100={ artworkUrl100 }
-                  trackId={ trackId }
+                .map((album) => (<MusicCard
+                  key={ album.trackId }
+                  musicTrack={ album.previewUrl }
+                  trackName={ album.trackName }
+                  artworkUrl100={ album.artworkUrl100 }
+                  trackId={ album.trackId }
+                  collectionId={ album.collectionId }
                   favoriteSong={ this.favoriteSong }
                   favoritePage
                 />))}

@@ -1,6 +1,7 @@
 // Bibliotecas
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 // Componentes
 import Loading from './Loading';
@@ -45,6 +46,7 @@ favoriteCheckBox = ({ target }) => {
 render() {
   const {
     musicTrack, trackName, trackId, artworkUrl100, favoritePage = false,
+    collectionId,
   } = this.props;
 
   const { favorite, trackLoading } = this.state;
@@ -54,7 +56,13 @@ render() {
       ? <Loading />
       : (
         <li className="album-track">
-          { favoritePage && (<img src={ artworkUrl100 } alt="Imagem do album" />) }
+          { favoritePage && (
+            <Link
+              to={ `/album/${collectionId}` }
+            >
+              <img src={ artworkUrl100 } alt="Imagem do album" />
+            </Link>
+          ) }
           <span>
             {trackName}
           </span>
