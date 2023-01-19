@@ -1,5 +1,6 @@
 // Bibliotecas
 import React, { Component } from 'react';
+import { MagnifyingGlass } from 'phosphor-react';
 
 // Serviços
 import searchAlbumAPIs from '../services/searchAlbumsAPI';
@@ -64,7 +65,7 @@ searchStateUpdate = ({ target }) => {
         </span>);
     }
     return (
-      <section className="search-container">
+      <section className="albums-found-container">
         <span
           className="album-result-title"
         >
@@ -91,14 +92,21 @@ searchStateUpdate = ({ target }) => {
         <Header />
 
         <section className="search-input-container">
-
-          <input
-            type="text"
-            placeholder="Nome do Artista ou Banda"
-            data-testid="search-artist-input"
-            value={ searchFor }
-            onChange={ this.searchStateUpdate }
-          />
+          <section
+            className="search-input"
+          >
+            <input
+              type="text"
+              placeholder="Nome do Artista ou Banda"
+              data-testid="search-artist-input"
+              value={ searchFor }
+              onChange={ this.searchStateUpdate }
+            />
+            <MagnifyingGlass
+              className="search-ico"
+              size={ 20 }
+            />
+          </section>
 
           <button
             type="button"
