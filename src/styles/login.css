@@ -20,7 +20,8 @@
   height: 220px;
   justify-content: center;
   margin: auto;
-  width: 450px;
+  max-width: 450px;
+  width: 80%;
 }
 
 .login-forms input, .login-forms button {
