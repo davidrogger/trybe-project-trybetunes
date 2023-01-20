@@ -10,7 +10,6 @@
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
-  min-width: 850px;
 }
 
 .album-details-left-container {
@@ -49,6 +48,10 @@
   position: relative;
 }
 
+.favorite-background-container h1 {
+  align-self: center;
+}
+
 .favorite-background-container h2 {
   font-size: 24px;
   font-style: normal;
@@ -64,6 +67,7 @@
   flex-direction: column;
   margin: 0 30px;
   margin-top: 50px;
+  max-width: 550px;
 }
 
 .album-track span {
@@ -118,5 +122,22 @@
 
   .album-playlist {
     width: 100vw;
+  }
+
+  /* .audio-container {
+    flex-direction: column;
+  } */
+
+  .album-track {
+    flex-direction: column;
+    height: 150px;
+    padding: 10px;
+  }
+
+  .album-track span {
+    justify-content: center;
+    margin: 5px 0;
+    overflow: visible;
+    text-align: center;
   }
 }
