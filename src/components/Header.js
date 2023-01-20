@@ -7,7 +7,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 
 // Componentes
-import Loading3 from './Loading3';
+import Loading from './Loading2';
 
 import tunesLogo from '../imgs/trybetunes_logo2.svg';
 
@@ -43,7 +43,7 @@ class Header extends Component {
       <header data-testid="header-component" className="header-container top-container">
 
         {headerLoading
-          ? <Loading3 />
+          ? <Loading />
           : (
             <>
               <section className="header-content">
