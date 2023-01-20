@@ -5,10 +5,10 @@
 - Quando cada metodo é chamado dependendo da ação sobre o componente, sendo apresentando o melhor metodo para se usar para realizar requisições para um API lidando melhor com assincronicidade. Também apresenteado o React route, ja que o react é uma aplicação chamada de "Single page application" onde tudo é renderizado em uma mesma página, tornando a experiência durante a o uso, mais fluida, sem recarregamento da página.
 #
 <div align="center">
-  <a href="https://davidrogger.github.io/trybe-project-trybetunes>
-    <img width="30%" src="./imgs/project_trybetunes_top.webp">
-    <img width="30%" src="./imgs/project_trybetunes_mid.webp">
-    <img width="30%" src="./imgs/project_trybetunes_bottom.webp">
+  <a href="https://davidrogger.github.io/trybe-project-trybetunes">
+    <img width="30%" src="./readme-imgs/project_trybetunes_top.webp">
+    <img width="30%" src="./readme-imgs/project_trybetunes_mid.webp">
+    <img width="30%" src="./readme-imgs/project_trybetunes_bottom.webp">
   </a>
 </div>
 
