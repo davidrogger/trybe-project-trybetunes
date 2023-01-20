@@ -66,14 +66,14 @@
 <details>
   <summary>
     <strong>
-      :bookmark_tabs: Todo
+      :memo:
     </strong>
   </summary>
 
-  - [x] - ~~Atingir requisitos da trybe durante o prazo mínimo de entrega.~~ ![data](https://badgen.net/badge/delivery/09-03-2022/green)
-  - [x] - ~~Revisar CSS.~~ ![data](https://badgen.net/badge/delivery/20-01-2023/green)
+  - [x] - ~~Criar aplicação com base nos requisitos da trybe.~~ ![data](https://badgen.net/badge/delivery/09-03-2022/green)
+  - [ ] - Revisar Estilo dos elementos com base no figma. ![data](https://badgen.net/badge/progress/18-01-2023/yellow)
   - [ ] - Desenvolver testes automatizados.
-  - [ ] - Adequar para mobile.
+  - [ ] - Adaptar elementos da aplicação para mobile.
 
 </details>
 
