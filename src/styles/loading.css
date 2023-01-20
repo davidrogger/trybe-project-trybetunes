@@ -6,6 +6,34 @@
   width: 100%;
 }
 
+.horizontal-bar {
+  animation: progres 3.5s infinite linear;
+  background-color: white;
+  display: inline-block;
+  height: 5px;
+  position: absolute;
+  transform-origin: left;
+  width: 100%;
+}
+
+@keyframes progres {
+
+  0% {
+    transform: scaleX(0.1);
+  }
+
+  50% {
+    background: #2fc18c;
+    transform: scaleX(1);
+  }
+
+  100% {
+    background: transparent;
+    transform: scaleX(0.1);
+  }
+
+}
+
 .bar {
   animation: loader 1.2s linear infinite;
   background-color: white;
