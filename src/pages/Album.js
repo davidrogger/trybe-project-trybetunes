@@ -70,8 +70,12 @@ render() {
               <>
                 <section className="album-details-left-container">
                   <img src={ artworkIMG } alt={ collectionName } />
-                  <h3 data-testid="artist-name">{artistName}</h3>
-                  <span data-testid="album-name">{collectionName}</span>
+                  <section
+                    className="album-titles"
+                  >
+                    <h3 data-testid="artist-name">{artistName}</h3>
+                    <span data-testid="album-name">{collectionName}</span>
+                  </section>
                 </section>
                 <ul className="album-playlist">
                   {musicList.map(({ previewUrl, trackId, trackName }) => (

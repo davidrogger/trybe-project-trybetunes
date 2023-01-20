@@ -19,7 +19,7 @@
 }
 
 .album-details-left-container h3 {
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .album-detail img {
@@ -67,8 +67,14 @@
 }
 
 .album-track span {
-  max-width: 150px;
-  padding: 30px;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  padding: 0 12px;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  width: 150px;
 }
 
 .favorite-background-container img {
@@ -81,6 +87,36 @@
   display: flex;
 }
 
-.audio-container audio {
-  margin-right: 10px;
+.audio-container svg {
+  margin: 10px;
+}
+
+@media ( max-width : 900px ) {
+
+  .album-detail {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .album-details-left-container {
+    align-items: center;
+    display: flex;
+    margin-bottom: 50px;
+    padding-right: 50px;
+  }
+
+  .audio-container audio {
+    width: 250px;
+  }
+
+  .album-titles {
+    margin-left: 10px;
+  }
+}
+
+@media ( max-width : 500px ) {
+
+  .album-playlist {
+    width: 100vw;
+  }
 }
