@@ -45,6 +45,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 80px;
+  padding-bottom: 80px;
   position: relative;
 }
 
@@ -74,11 +75,13 @@
   align-items: center;
   display: flex;
   height: 100%;
+  margin-right: 10px;
   overflow: hidden;
-  padding: 0 12px;
-  text-overflow: ellipsis;
+  overflow-wrap: anywhere;
+  padding-left: 8px;
+  text-overflow: ellipse;
   white-space: wrap;
-  width: 150px;
+  width: 100px;
 }
 
 .favorite-background-container img {
@@ -124,20 +127,17 @@
     width: 100vw;
   }
 
-  /* .audio-container {
+  .favorite-background-container .album-track {
     flex-direction: column;
-  } */
-
-  .album-track {
-    flex-direction: column;
-    height: 150px;
+    height: 170px;
     padding: 10px;
   }
 
-  .album-track span {
+  .favorite-background-container .album-track span {
     justify-content: center;
     margin: 5px 0;
     overflow: visible;
     text-align: center;
+    width: 100%;
   }
 }
