@@ -66,7 +66,7 @@
 <details>
   <summary>
     <strong>
-      :memo:
+      :memo: Todo list
     </strong>
   </summary>
 
