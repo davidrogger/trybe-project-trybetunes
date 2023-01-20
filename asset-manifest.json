@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/trybe-project-trybetunes/static/css/main.851d9d5d.chunk.css",
+    "main.js": "/trybe-project-trybetunes/static/js/main.f88f6411.chunk.js",
+    "main.js.map": "/trybe-project-trybetunes/static/js/main.f88f6411.chunk.js.map",
+    "runtime-main.js": "/trybe-project-trybetunes/static/js/runtime-main.53bc65e7.js",
+    "runtime-main.js.map": "/trybe-project-trybetunes/static/js/runtime-main.53bc65e7.js.map",
+    "static/js/2.6659c22b.chunk.js": "/trybe-project-trybetunes/static/js/2.6659c22b.chunk.js",
+    "static/js/2.6659c22b.chunk.js.map": "/trybe-project-trybetunes/static/js/2.6659c22b.chunk.js.map",
+    "index.html": "/trybe-project-trybetunes/index.html",
+    "static/css/main.851d9d5d.chunk.css.map": "/trybe-project-trybetunes/static/css/main.851d9d5d.chunk.css.map",
+    "static/js/2.6659c22b.chunk.js.LICENSE.txt": "/trybe-project-trybetunes/static/js/2.6659c22b.chunk.js.LICENSE.txt",
+    "static/media/default_avatar.9ea5d993.svg": "/trybe-project-trybetunes/static/media/default_avatar.9ea5d993.svg",
+    "static/media/trybetunes_logo.99baff09.svg": "/trybe-project-trybetunes/static/media/trybetunes_logo.99baff09.svg",
+    "static/media/trybetunes_logo2.045de2e9.svg": "/trybe-project-trybetunes/static/media/trybetunes_logo2.045de2e9.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.53bc65e7.js",
+    "static/js/2.6659c22b.chunk.js",
+    "static/css/main.851d9d5d.chunk.css",
+    "static/js/main.f88f6411.chunk.js"
+  ]
+}
