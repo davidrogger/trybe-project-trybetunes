@@ -29,7 +29,7 @@
 
 # Conclusão
 
-- Projeto bem divertido, boa parte das funcionalidades que coletam as músicas do itunes, ja foram pré montadas pela trybe, pois o foco aqui era, de entender o funcionamento das rotas e uso do ciclo de vida do react, e quero revisita-lo e refatorar seu CSS pois comparado com o tryunfo ficou bem fraco.
+- Projeto bem divertido, boa parte das funcionalidades que coletam as músicas do itunes, ja foram pré montadas pela trybe, pois o foco aqui era, de entender o funcionamento das rotas e uso do ciclo de vida do react.
 
 </details>
 
