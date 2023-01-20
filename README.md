@@ -63,8 +63,22 @@
 
 </details>
 
+<details>
+  <summary>
+    <strong>
+      :bookmark_tabs: Todo
+    </strong>
+  </summary>
+
+  - [x] - ~~Atingir requisitos da trybe durante o prazo mínimo de entrega.~~ ![data](https://badgen.net/badge/delivery/09-03-2022/green)
+  - [x] - ~~Revisar CSS.~~ ![data](https://badgen.net/badge/delivery/20-01-2023/green)
+  - [ ] - Desenvolver testes automatizados.
+  - [ ] - Adequar para mobile.
+
+</details>
+
 #
 
 <div align="right">
-  <img src="https://badgen.net/badge/last%20update/18-01-2023/blue">
+  <img src="https://badgen.net/badge/last%20update/20-01-2023/blue">
 </div>
