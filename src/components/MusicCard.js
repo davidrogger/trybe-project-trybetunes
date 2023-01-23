@@ -64,9 +64,11 @@ render() {
               <img src={ artworkUrl100 } alt="Imagem do album" />
             </Link>
           ) }
-          <span>
-            {trackName}
-          </span>
+          <section className="track-name-container">
+            <span>
+              {trackName}
+            </span>
+          </section>
           <section
             className="audio-container"
           >
