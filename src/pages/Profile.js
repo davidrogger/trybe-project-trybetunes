@@ -9,6 +9,8 @@ import Loading from '../components/Loading';
 // Serviços
 import { getUser } from '../services/userAPI';
 
+import defaultAvatar from '../imgs/default_avatar.svg';
+
 class Profile extends Component {
   constructor(props) {
     super(props);
@@ -33,14 +35,14 @@ userLogged = async () => {
 
 profileDisplay = () => {
   const { userData } = this.state;
-  // console.log(userData);
+
   return (
     <>
       <div className="profile-top-container">
         <div className="profile-img-container">
           <img
             data-testid="profile-image"
-            src={ userData.image }
+            src={ userData.image || defaultAvatar }
             alt={ `avatar-${userData.name}` }
           />
         </div>

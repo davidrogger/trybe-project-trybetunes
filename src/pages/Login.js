@@ -8,6 +8,8 @@ import { createUser } from '../services/userAPI';
 // Componentes
 import Loading from '../components/Loading';
 
+import tunesLogo from '../imgs/trybetunes_logo.svg';
+
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -50,9 +52,8 @@ minNameLength = () => {
     const { userName, buttonDisable, loading } = this.state;
     return loading ? <Loading /> : (
       <section data-testid="page-login" className="login-container">
-        <h1>trybe tunes</h1>
+        <img className="login-logo" src={ tunesLogo } alt="trybe tunes logo" />
         <section className="login-forms">
-
           <input
             type="text"
             placeholder="Nome"
@@ -70,7 +71,6 @@ minNameLength = () => {
           >
             Entrar
           </button>
-
         </section>
       </section>
     );

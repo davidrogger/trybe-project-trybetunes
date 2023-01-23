@@ -1,5 +1,12 @@
 .login-container {
-  margin: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-logo {
+  margin-bottom: 100px;
+  width: 200px;
 }
 
 
@@ -13,12 +20,14 @@
   height: 220px;
   justify-content: center;
   margin: auto;
-  width: 450px;
+  max-width: 450px;
+  width: 80%;
 }
 
 .login-forms input, .login-forms button {
   border: 1px solid rgba(0, 0, 0, 0.137);
   box-sizing: border-box;
+  margin: 15px 0;
   width: 80%;
 }
 

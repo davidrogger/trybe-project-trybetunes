@@ -9,6 +9,8 @@ import Loading from '../components/Loading';
 // Serviços
 import { getUser, updateUser } from '../services/userAPI';
 
+import defaultAvatar from '../imgs/default_avatar.svg';
+
 class ProfileEdit extends Component {
   constructor(props) {
     super(props);
@@ -51,7 +53,6 @@ class ProfileEdit extends Component {
 
   formsStateUpdate = ({ target }) => {
     const { name, value } = target;
-    console.log(value);
     this.setState((prevState) => ({
       userData: { ...prevState.userData, [name]: value },
     }), () => this.validInput());
@@ -72,13 +73,14 @@ class ProfileEdit extends Component {
           <div className="profile-img-container">
             <img
               data-testid="profile-image"
-              src={ userData.image }
+              src={ userData.image || defaultAvatar }
               alt={ `avatar-${userData.name}` }
             />
           </div>
           <div className="profile-button-container">
-
             <input
+              className="input-edit-link"
+              placeholder="Insira um link"
               data-testid="edit-input-image"
               type="text"
               name="image"
@@ -89,9 +91,10 @@ class ProfileEdit extends Component {
           </div>
         </div>
         <div className="profile-edit-info-container">
-
           <strong>Nome:</strong>
+          <em>Fique à vontade para usar seu nome social</em>
           <input
+            className="profile-info-input"
             data-testid="edit-input-name"
             type="text"
             name="name"
@@ -100,22 +103,28 @@ class ProfileEdit extends Component {
           />
 
           <strong>E-mail:</strong>
+          <em>Escolha um e-mail que consulte diariamente</em>
           <input
+            className="profile-info-input"
             data-testid="edit-input-email"
             type="text"
             name="email"
+            placeholder="usuario@usuario.com.br"
             value={ userData.email }
             onChange={ this.formsStateUpdate }
           />
 
           <strong>Descrição:</strong>
           <textarea
+            className="profile-info-input"
+            placeholder="Sobre mim"
             data-testid="edit-input-description"
             name="description"
             value={ userData.description }
             onChange={ this.formsStateUpdate }
           />
           <button
+            className="blue-button"
             data-testid="edit-button-save"
             type="button"
             disabled={ buttonDisable }

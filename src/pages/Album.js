@@ -62,28 +62,33 @@ render() {
   return (
     <section data-testid="page-album" className="top-container">
       <Header />
-
-      <section className="album-detail">
-        { albumLoading
-          ? <Loading />
-          : (
-            <>
-              <section className="album-side-container">
-                <img src={ artworkIMG } alt={ collectionName } />
-                <p data-testid="artist-name">{artistName}</p>
-                <p data-testid="album-name">{collectionName}</p>
-              </section>
-              <ul className="album-playlist">
-                {musicList.map(({ previewUrl, trackId, trackName }) => (
-                  <MusicCard
-                    key={ trackId }
-                    musicTrack={ previewUrl }
-                    trackName={ trackName }
-                    trackId={ trackId }
-                    favoriteSong={ this.favoriteSong }
-                  />))}
-              </ul>
-            </>)}
+      <section className="album-container">
+        <section className="album-detail">
+          { albumLoading
+            ? <Loading />
+            : (
+              <>
+                <section className="album-details-left-container">
+                  <img src={ artworkIMG } alt={ collectionName } />
+                  <section
+                    className="album-titles"
+                  >
+                    <h3 data-testid="artist-name">{artistName}</h3>
+                    <span data-testid="album-name">{collectionName}</span>
+                  </section>
+                </section>
+                <ul className="album-playlist">
+                  {musicList.map(({ previewUrl, trackId, trackName }) => (
+                    <MusicCard
+                      key={ trackId }
+                      musicTrack={ previewUrl }
+                      trackName={ trackName }
+                      trackId={ trackId }
+                      favoriteSong={ this.favoriteSong }
+                    />))}
+                </ul>
+              </>)}
+        </section>
       </section>
     </section>
   );

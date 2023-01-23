@@ -1,6 +1,8 @@
 // Bibliotecas
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { Heart } from 'phosphor-react';
 
 // Componentes
 import Loading from './Loading';
@@ -32,18 +34,22 @@ isFavorite = async () => {
   });
 }
 
-favoriteCheckBox = ({ target }) => {
+favoriteCheckBox = (trackId) => {
   const { favoriteSong } = this.props;
+  const { favorite } = this.state;
   this.setState((prevState) => ({
     favorite: !prevState.favorite,
   }));
-  const boxValue = target.checked;
-  const trackId = Number(target.id);
+  const boxValue = !favorite;
   favoriteSong(trackId, boxValue);
 }
 
 render() {
-  const { musicTrack, trackName, trackId } = this.props;
+  const {
+    musicTrack, trackName, trackId, artworkUrl100, favoritePage = false,
+    collectionId,
+  } = this.props;
+
   const { favorite, trackLoading } = this.state;
 
   return (
@@ -51,34 +57,45 @@ render() {
       ? <Loading />
       : (
         <li className="album-track">
-          {trackName}
-          <audio
-            data-testid="audio-component"
-            src={ musicTrack }
-            controls
+          { favoritePage && (
+            <Link
+              to={ `/album/${collectionId}` }
+            >
+              <img src={ artworkUrl100 } alt="Imagem do album" />
+            </Link>
+          ) }
+          <span>
+            {trackName}
+          </span>
+          <section
+            className="audio-container"
           >
-            <track kind="captions" />
-          </audio>
-          <label htmlFor={ trackId }>
-            Favorita
-            <input
+            <audio
+              data-testid="audio-component"
+              src={ musicTrack }
+              controls
+            >
+              <track kind="captions" />
+            </audio>
+            <Heart
+              size={ 25 }
+              weight={ favorite ? 'fill' : 'regular' }
               id={ trackId }
-              type="checkbox"
-              checked={ favorite }
-              onChange={ this.favoriteCheckBox }
-              data-testid={ `checkbox-music-${trackId}` }
+              onClick={ () => this.favoriteCheckBox(trackId) }
             />
-          </label>
+          </section>
         </li>)
   );
 }
 }
 
 MusicCard.propTypes = {
-  musicTrack: PropTypes.string.isRequired,
-  trackName: PropTypes.string.isRequired,
-  trackId: PropTypes.number.isRequired,
-  favoriteSong: PropTypes.func.isRequired,
-};
+  musicTrack: PropTypes.string,
+  trackName: PropTypes.string,
+  trackId: PropTypes.number,
+  favoriteSong: PropTypes.func,
+  artworkUrl100: PropTypes.string,
+  isFavoritePage: PropTypes.bool,
+}.isRequired;
 
 export default MusicCard;

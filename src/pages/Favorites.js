@@ -46,31 +46,38 @@ class Favorites extends Component {
       favoriteList.length === 0
         ? (<h1>Não existem músicas favorista ainda</h1>)
         : (
-          <section className="favorite-container">
-            Músicas favoritas:
+          <>
+            <h2>
+              Músicas favoritas:
+            </h2>
             <ul>
-              {favoriteList.map(({ previewUrl, trackId, trackName }) => (<MusicCard
-                key={ trackId }
-                musicTrack={ previewUrl }
-                trackName={ trackName }
-                trackId={ trackId }
-                favoriteSong={ this.favoriteSong }
-              />))}
+              {favoriteList
+                .map((album) => (<MusicCard
+                  key={ album.trackId }
+                  musicTrack={ album.previewUrl }
+                  trackName={ album.trackName }
+                  artworkUrl100={ album.artworkUrl100 }
+                  trackId={ album.trackId }
+                  collectionId={ album.collectionId }
+                  favoriteSong={ this.favoriteSong }
+                  favoritePage
+                />))}
             </ul>
-          </section>
+          </>
         )
     );
   }
 
   render() {
-    const { favoriteList, favoriteLoading } = this.state;
-    console.log(favoriteList);
+    const { favoriteLoading } = this.state;
     return (
       <section data-testid="page-favorites" className="top-container">
         <Header />
-        {favoriteLoading
-          ? <Loading />
-          : this.favoriteDisplay() }
+        <section className="favorite-background-container">
+          {favoriteLoading
+            ? <Loading />
+            : this.favoriteDisplay() }
+        </section>
       </section>
     );
   }

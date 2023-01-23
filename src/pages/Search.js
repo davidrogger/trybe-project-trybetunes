@@ -1,5 +1,6 @@
 // Bibliotecas
 import React, { Component } from 'react';
+import { MagnifyingGlass } from 'phosphor-react';
 
 // Serviços
 import searchAlbumAPIs from '../services/searchAlbumsAPI';
@@ -56,17 +57,22 @@ searchStateUpdate = ({ target }) => {
 
   searchDisplay = (searchList, currentSearch) => {
     if (searchList.length === 0) {
-      return <p>Nenhum álbum foi encontrado</p>;
+      return (
+        <span
+          className="album-not-found"
+        >
+          Nenhum álbum foi encontrado
+        </span>);
     }
     return (
-      <>
-
-        <p>{`Resultado de álbuns de: ${currentSearch}`}</p>
-
-        <section className="current-search-display">
-
+      <section className="albums-found-container">
+        <span
+          className="album-result-title"
+        >
+          {`Resultado de álbuns de: ${currentSearch}`}
+        </span>
+        <section className="albuns-found-container">
           {searchList.map((album) => (
-
             <AlbumCard
               searchData={ album }
               key={ `album-key-${album.collectionId}` }
@@ -74,7 +80,7 @@ searchStateUpdate = ({ target }) => {
           ))}
         </section>
 
-      </>);
+      </section>);
   }
 
   render() {
@@ -86,14 +92,21 @@ searchStateUpdate = ({ target }) => {
         <Header />
 
         <section className="search-input-container">
-
-          <input
-            type="text"
-            placeholder="Nome do Artista ou Banda"
-            data-testid="search-artist-input"
-            value={ searchFor }
-            onChange={ this.searchStateUpdate }
-          />
+          <section
+            className="search-input"
+          >
+            <input
+              type="text"
+              placeholder="Nome do Artista ou Banda"
+              data-testid="search-artist-input"
+              value={ searchFor }
+              onChange={ this.searchStateUpdate }
+            />
+            <MagnifyingGlass
+              className="search-ico"
+              size={ 20 }
+            />
+          </section>
 
           <button
             type="button"
