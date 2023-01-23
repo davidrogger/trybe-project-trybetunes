@@ -19,6 +19,7 @@ import './styles/search.css';
 import './styles/album.css';
 import './styles/loading.css';
 import './styles/profile.css';
+import './styles/notfound.css';
 
 class App extends Component {
   constructor(props) {
@@ -39,13 +40,13 @@ class App extends Component {
     const { logIn } = this.state;
     return (
       <main className="main-container">
-        <Router>
+        <Router basename="trybe-project-trybetunes">
           <Switch>
-            <Route path="/album/:id" component={ Album } />
-            <Route path="/profile/edit" component={ ProfileEdit } />
-            <Route path="/profile/" component={ Profile } />
-            <Route path="/favorites" component={ Favorites } />
-            <Route path="/search" component={ Search } />
+            <Route exact path="/album/:id" component={ Album } />
+            <Route exact path="/profile/edit" component={ ProfileEdit } />
+            <Route exact path="/profile/" component={ Profile } />
+            <Route exact path="/favorites" component={ Favorites } />
+            <Route exact path="/search" component={ Search } />
 
             <Route exact path="/">
               { logIn
