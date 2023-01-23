@@ -16,21 +16,21 @@
   color: white;
 }
 
-input, button {
+.main-container input, .main-container button {
   border-radius: 5px;
   box-sizing: border-box;
   height: 30px;
 }
 
-button {
+.main-container button {
   border: none;
 }
 
-input {
+.main-container input {
   padding-left: 15px;
 }
 
-button:disabled {
+.main-container button:disabled {
   cursor: not-allowed;
   opacity: 60%;
 }
